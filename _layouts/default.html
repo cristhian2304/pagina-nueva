@@ -1,0 +1,77 @@
+---
+layout: compress
+---
+{% include head.html %}
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBDMNVQB"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% include nav.html %}
+  {% include header.html %}
+  {% if page.layout == "post" %}
+  <main class="wrapper flow post">
+    {{ content }}
+  </main>
+  {% else %}
+  {{ content }}
+  {% endif %}
+  {% include footer.html %}
+  <a href="#" class="boton-whatsapp" id="lead_whatsapp" target="_blank" rel="nofollow noopener noreferrer" title="Contacta con Turbo Diesel de Colombia GD">
+    <img src="{{'img/whatsapp-logo.webp'|relative_url}}" alt="Logo de WhatsApp" width="48" height="48" title="WhatsApp de Turbo Diesel de Colombia GD" loading="eager">
+  </a>
+  <button id="scroll-to-top" aria-label="Volver arriba" title="Volver arriba">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6" /></svg>
+  </button>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var scrollToTopBtn = document.getElementById("scroll-to-top");
+      var rootElement = document.documentElement;
+      function handleScroll() {
+        var scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+        if ((rootElement.scrollTop / scrollTotal) > 0.20) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      }
+      function scrollToTop() {
+        rootElement.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+      scrollToTopBtn.addEventListener("click", scrollToTop);
+      document.addEventListener("scroll", handleScroll);
+    });
+  </script>
+  <script defer src="{{ 'js/app.js' | relative_url }}"></script>
+
+  {% if page.layout == "servicio" or page.layout == "pagina" %}
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const faqPreguntas = document.querySelectorAll('.faq-pregunta');
+
+      faqPreguntas.forEach(pregunta => {
+        pregunta.addEventListener('click', () => {
+          const respuesta = pregunta.nextElementSibling;
+          const estaActiva = pregunta.classList.contains('active');
+
+          faqPreguntas.forEach(p => {
+            p.classList.remove('active');
+            p.nextElementSibling.classList.remove('active');
+          });
+
+          if (!estaActiva) {
+            pregunta.classList.add('active');
+            respuesta.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+  {% endif %}
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+/* Contenedor principal */
+.testimonials {
+  background-color: var(--bg-grey);
+  box-shadow: 0 0 0 100vmax var(--bg-grey);
+  -webkit-clip-path: inset(0-100vmax);
+  clip-path: inset(0-100vmax);
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4em;
+    padding: 0 0 40px;
+    width: min(calc(100% - 2rem), 1120px);
+  }
+}
+
+/* Tarjeta individual de cada testimonio */
+.testimonial-card {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex: 1 0 332px;
+  max-width: 100%;
+  padding: 2em;
+  background-color: #fff;
+}
+
+/* Perfil del usuario */
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+
+.profile img {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.profile span {
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  color: #666;
+}
+
+/* Estrellas */
+.stars {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin: 0.5em 0;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  gap: 0.5rem;
+  width: min(100%, 320px);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* cards */
+.cards .wrapper {
+  padding: 0 0 4em;
+}
+
+.cards__bg {
+  .wrapper {
+    padding: 8em 0 4em;
+
+    .text_center {
+      margin-top: 4em;
+    }
+  }
+}
+
+.card-icon {
+  width: 64px;
+  height: 64px;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--grey-2);
+  text-align: center;
+}
+
+.card ul li {
+  font-size: 1rem;
+  color: var(--grey-1);
+}
+
+
+.two_columns {
+  .faq-item {
+    margin-bottom: 12px;
+
+    &::before {
+      content: "?";
+      margin-right: 0.2em;
+      color: #ffce00;
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+  }
+}
+
+.categories__service {
+  box-shadow: var(--shadow);
+
+  img {
+    -o-object-position: top right;
+    object-position: top right;
+  }
+
+  div {
+    padding: 12px;
+
+    h3 {
+      color: var(--color-main);
+      font-size: 1.5rem;
+      margin-bottom: 1em;
+    }
+    p {
+      font-size: 16px;
+    }
+
+    a {
+      transition: all 0.4s ease-in;
+    }
+  }
+
+  .services__list a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 2.4px;
+    text-underline-offset: 4px;
+  }
+}
+
+.three_columns .card__contact {
+  padding: 20px 8px;
+  gap: 8px;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-cards);
+  overflow: hidden;
+  background-color: var(--color-white);
+
+  div {
+    padding: 12px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin: 12px 0 0;
+    color: var(--color-main);
+  }
+}
+
+/* Contenedor principal de las tarjetas */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  gap: 0.5rem;
+  width: min(100%, 320px);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.text_center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

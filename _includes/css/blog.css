@@ -1,0 +1,114 @@
+.posts{
+  padding: 4em 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.posts__blog {
+  margin: 0;
+  display: grid;
+  gap: 1em;
+  place-items: center;
+  width: min(100%, 320px);
+  
+  div{
+    display: grid;
+    
+    small{
+      font-weight: 700;
+      place-self: end;
+    }
+
+    h4{
+      padding: 12px;
+      box-shadow: var(--shadow);
+      background-color: #fefefe;
+    }
+    
+    .intro{
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    
+    .link{
+      place-self: end;
+      margin: 0;
+    }
+  }
+}
+
+.post img{
+  display: block;
+  margin-bottom: 1em;
+  box-shadow: var(--shadow);
+}
+
+.related-posts {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid #eee;
+}
+
+.related-posts h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.related-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.related-post-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.related-post-card:hover {
+  transform: translateY(-5px);
+}
+
+.related-post-image {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.related-post-content {
+  padding: 1.5rem;
+}
+
+.related-post-content h3 {
+  margin: 0 0 1rem 0;
+}
+
+.related-post-content a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.related-post-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.related-post-excerpt {
+  color: #444;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .related-posts-grid {
+    grid-template-columns: 1fr;
+  }
+}

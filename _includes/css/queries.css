@@ -1,0 +1,72 @@
+@media screen and (width >=520px) {
+}
+
+@media screen and (width >= 992px) {
+  .header_home{
+    justify-content: space-between;
+  }
+
+  .beneficios ul,
+  .dos_columnas{
+    justify-content: space-between;
+  }
+}
+
+@media screen and (width >= 1024px) {
+}
+
+@media screen and (width >= 1200px) {
+}
+
+@media screen and (width <= 1200px) {
+  nav ul {
+    float: none;
+    position: fixed;
+    flex-direction: column;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    top: 60px;
+    width: auto;
+    height: auto;
+    overflow: auto;
+    transition: all 0.4s ease-out;
+    background-color: #e5e5e5;
+    background-image: url("/img/bg.webp");
+    align-items: center;
+  }
+
+  .navegacion > a:not(:last-child),
+  .navegacion > li,
+  .dropdown-content a {
+    color: var(--accion);
+    width: min(100%, 320px);
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  .dropdown-content {
+    top: 40px;
+  }
+
+  nav :checked ~ ul {
+    bottom: 0;
+  }
+
+  nav .icono-nav {
+    display: block;
+  }
+
+  nav :checked ~ .icono-nav .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+
+  nav :checked ~ .icono-nav .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  nav :checked ~ .icono-nav .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+}

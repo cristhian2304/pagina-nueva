@@ -1,0 +1,37 @@
+---
+layout: pagina
+title: "Servicios de Mantenimiento y Reparación de Turbos | Colombia GD"
+description: "Servicios especializados en mantenimiento, reparación e instalación de turbos. Diagnóstico computarizado y técnicos certificados."
+h1: 'Necesitas nuestros <span class="resaltar">servicios profesionales para turbos diesel</span>'
+intro: En Bogotá tenemos nuestra sede lista para que recibas nuestros servicios profesionales. Tu vehículo, o tus vehículos, estarán listos para seguir su rutina y llevarte a donde necesitas sin contratiempos.
+hero: img/servicios-turbo-diesel.avif
+alt: Fotografía de motor turbo diesel en mantenimiento en el taller de turbos
+permalink: /servicios/
+---
+<main class="about wrapper">
+  <h2>Escoge el servicio que buscas en el mejor laboratorio de turbos de Colombia</h2>
+  <p>Desde el año 2007 estamos cultivando toda la experiencia que hoy nos permite ofrecerte servicios con 2 características primordiales:</p>
+
+  <h3>Los servicios de Turbo Diesel de Colombia GD: <span class="resaltar">Calidad y garantías</span> aseguradas</h3>
+  <ul>
+    {% for servicio in site.servicios %}
+    <li>
+      <h4>{{servicio.h1}}</h4>
+      <div>
+        <img src="{{'img/logo-mini.avif' | relative_url }}" alt="Lorem ipsum" title="lorem ipsum" loading="lazy">
+        <p>{{servicio.description}}
+          <br>
+          <a href="{{servicio.url | relative_url}}" title="{{servicio.title}}">→ Ver más</a>
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
+{% include datos.html %}
+<aside class="parallax">
+  <div class="parallax-content">
+    <h2>Trabaja con Turbo Diésel de Colombia GD desde hoy</h2>
+    {% include boton.html %}
+  </div>
+</aside>

@@ -1,0 +1,14 @@
+<main class="fondo wrapper detalles_servicio">
+    <h2>{{include.title}}</h2>
+    <div>
+      <img src="{{include.img | relative_url }}" alt="{{include.alt}}" loading="lazy" decoding="async">
+        <ul class="lista_servicios">
+          {% for servicio in page.servicios_ofrecidos %}
+          <li>
+            <span class="numero-servicio">{{ forloop.index }}</span>
+            <small class="descripcion-servicio">{{ servicio }}</small>
+          </li>
+        {% endfor %}
+        </ul>
+    </div>
+  </main>

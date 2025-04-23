@@ -1,0 +1,21 @@
+---
+layout: compress
+---
+{% include css/universales.css %}
+{% include css/nav.css %}
+{% include css/header.css %}
+{% include css/home.css %}
+{% include css/footer.css %}
+{% include css/slider.css %}
+{% include css/carousel.css %}
+{% include css/blog.css %}
+{% include css/share.css %}
+{% include css/paginas.css %}
+{% include css/boton-up.css %}
+{% include css/testimonial.css %}
+{% include css/cards.css %}
+{% include css/image.css %}
+{% include css/queries.css %}
+
+
+

@@ -1,0 +1,35 @@
+{% if page.layout == "pagina" %}
+<section class="faqs wrapper">
+  <h2>{{include.title}}</h2>
+  <div class="faqs-lista">
+    {% for faq in site.data.faqs %}
+    <div class="faq-item">
+      <h3 class="faq-pregunta">
+        <span class="faq-numero">{{ forloop.index }}</span>
+        {{ faq.pregunta }}
+      </h3>
+      <div class="faq-respuesta">
+        <p>{{ faq.respuesta }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% else %}
+<section class="faqs wrapper">
+  <h2>{{include.title}}</h2>
+  <div class="faqs-lista">
+    {% for faq in page.faqs %}
+    <div class="faq-item">
+      <h3 class="faq-pregunta">
+        <span class="faq-numero">{{ forloop.index }}</span>
+        {{ faq.pregunta }}
+      </h3>
+      <div class="faq-respuesta">
+        <p>{{ faq.respuesta }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

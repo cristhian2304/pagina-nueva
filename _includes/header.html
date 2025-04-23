@@ -1,0 +1,60 @@
+{% assign layout = page.layout %}
+{% case layout %}
+
+{% when "default" %}
+<header class="header_home">
+  <div>
+    <h1>{{page.h1}}</h1>
+    <p>{{page.intro}}</p>
+    {% include boton.html %}
+  </div>
+  <img src="{{page.hero | relative_url }}" alt="{{page.alt}}" title="{{page.img_title}}" loading="eager">
+  
+{% when "servicio" %}
+<header class="header_servicio wrapper">
+  <h1>{{page.h1}}</h1>
+  <div>
+    <img 
+    src="{{ page.hero | relative_url }}" 
+    srcset="{{ page.hero | relative_url }} 1200w,
+            {{ page.hero_800 | relative_url }} 800w,
+            {{ page.hero_400 | relative_url }} 400w"
+    sizes="(min-width: 1024px) 1280px,
+           (min-width: 640px) 800px,
+           400px"
+    alt="{{ page.alt }}"
+    title="{{ page.img_title }}"
+    width="1280"
+    height="680"
+    loading="eager">
+    <p>{{ page.excerpt }}</p>
+    {% include boton.html %}
+  </div>
+
+{% when "post" %}
+<header class="post_header wrapper">
+  <div class="flow">
+    <h1>{{page.h1}}</h1>
+    <p>{{page.intro}}</p>
+    <i>Por {{page.autor}}, experto de Turbo Diésel de Colombia GD | Temática: <a href="/blog{{page.category|relative_url }}" title="Categoría del blog de turbo diésel: {{page.category}}" class="post_header--cat">{{page.category|capitalize}}</a></i>
+    {% capture words %}
+    {{ content | number_of_words | minus: 180 }}
+    {% endcapture %}
+    {% unless words contains '-' %}
+    {% endunless %}
+    <small><b>📍Estás aquí: </b><a href="/" title="Página de inicio">Inicio</a> / <a href="{{'blog' | relative_url}}" title="Blog Turbo Diésel de Colombia GD">Blog</a> / {{page.title}}</small>
+    <i>{{ words | plus: 150 | divided_by: 150 | append: ' minutos para leerlo' }}</i>
+  </div>
+    <img src="{{page.hero|relative_url}}" alt="{{page.alt}}" title="{{page.title}}" width="1280" height="680" loading="eager">
+
+{% else %}
+<header class="header_pages wrapper">
+  <div>
+    <h1>{{page.h1}}</h1>
+    {% if page.intro %}
+    <p>{{page.intro}}</p>
+    {% endif %}
+  </div>
+  <img src="{{page.hero |relative_url}}" alt="{{page.alt}}" title="{{page.title}}" loading="eager">
+{% endcase %}
+</header>

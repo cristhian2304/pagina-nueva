@@ -1,0 +1,96 @@
+# robots.txt para Turbo Diesel de Colombia GD
+# https://turbodieseldecolombiagd.com
+
+# 📌 Permitir rastreo a motores de búsqueda principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# 🚫 Bloquear bots no deseados y scrapers
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: Sogou web spider
+Disallow: /
+
+User-agent: 360Spider
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: Wget
+Disallow: /
+
+# 🔒 Permitir rastreo en las secciones clave
+User-agent: *
+Allow: /
+Allow: /blog
+Allow: /servicios
+Allow: /contacto
+Allow: /quienes-somos
+Allow: /preguntas-frecuentes
+
+# 🚫 Bloquear rastros de WordPress
+Disallow: /wp-*
+Disallow: /category/
+Disallow: /tag/
+Disallow: /author/
+Disallow: /page/
+Disallow: /feed/
+Disallow: /comments/
+Disallow: /attachment/
+Disallow: /?author=
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
+Disallow: /xmlrpc.php
+
+# 📢 Permitir feed.xml (pero no indexarlo)
+Allow: /feed.xml
+
+# 🚫 Bloquear URLs con parámetros publicitarios
+Disallow: /*?
+Disallow: *?s=*
+Disallow: *?p=*
+
+# 🔒 Proteger archivos sensibles
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# 🎨 Permitir recursos estáticos esenciales
+Allow: /img/*.jpg$
+Allow: /img/*.png$
+Allow: /img/*.webp$
+Allow: /css/
+Allow: /js/
+
+# 🗺️ Sitemap y dominio preferido
+Sitemap: https://turbodieseldecolombiagd.com/sitemap.xml

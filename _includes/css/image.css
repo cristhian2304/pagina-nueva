@@ -1,0 +1,57 @@
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+/* Image styling */
+.main-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Text overlay container */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  max-width: 30%;
+  color: rgb(251, 248, 248);
+  text-align: left;
+}
+
+/* Main heading text */
+.heading-text {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Optional: adds shadow to make text more readable */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .text-overlay {
+      right: 10%;
+      max-width: 60%;
+  }
+  
+  .heading-text {
+      font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .text-overlay {
+      right: 5%;
+      max-width: 80%;
+      top: 50%;
+  }
+  
+  .heading-text {
+      font-size: 20px;
+  }
+}

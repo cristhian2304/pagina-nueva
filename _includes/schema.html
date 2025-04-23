@@ -1,0 +1,238 @@
+{
+  "@context": "https://schema.org",
+  {% if page.layout == 'default' or page.layout == 'pagina' or page.url == '/' %}
+  "@type": "LocalBusiness",
+  "name": "{{ site.name }}",
+  "legalName": "Turbo Diesel de Colombia GD SAS",
+  "alternateName": "Laboratorio de Turbos Bogotá",
+  "description": "{{ page.description | default: 'Laboratorio especializado en turbos en Bogotá. Servicio profesional de diagnóstico, mantenimiento y reparación de turbos para motores diésel.' }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "logo": "{{ site.url }}/img/logo-turbo-diesel-colombia-gd.webp",
+  "image": [
+    {% if page.hero %}
+    "{{ site.url }}{{ page.hero }}"
+    {% else %}
+    "{{ site.url }}/img/laboratorio-turbos-especializado.avif",
+    "{{ site.url }}/img/servicios-turbo-diesel-de-colombia-gd.avif" 
+    {% endif %}
+  ],
+  "telephone": "+57{{ site.telefono }}",
+  "email": "{{ site.email }}",
+  "currenciesAccepted": "COP",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, Bank Transfer",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.direccion }}",
+    "addressLocality": "Bogotá",
+    "addressRegion": "Cundinamarca",
+    "postalCode": "110721",
+    "addressCountry": "CO"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 4.6468769,
+    "longitude": -74.1471986
+  },
+  "hasMap": "{{ site.maps }}",
+  "sameAs": [
+    "{{ site.facebook }}"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "18:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Saturday",
+      "opens": "08:00",
+      "closes": "14:00"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "115"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Bogotá"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Diagnóstico de turbos",
+        "description": "Diagnóstico computarizado y mecánico de turbos para vehículos diésel"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Mantenimiento de turbos",
+        "description": "Servicio especializado de mantenimiento preventivo para sistemas turbo diésel"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Reparación de turbos",
+        "description": "Reparación profesional de turbocargadores para motores diésel"
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Reconstrucción de turbos",
+        "description": "Reconstrucción completa de turbos para prolongar la vida útil de su motor"
+      }
+    }
+  ]
+  {% elsif page.layout == 'post' %}
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "headline": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "image": "{{ site.url }}{{ page.hero }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.autor | default: site.author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/img/logo-turbo-diesel-colombia-gd.webp",
+      "width": "200",
+      "height": "60"
+    }
+  },
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+  {% if page.category %}
+  "articleSection": "{{ page.category }}",
+  {% endif %}
+  {% if page.tags %}
+  "keywords": "{{ page.tags | join: ', ' }}",
+  {% endif %}
+  "wordCount": "{{ page.content | number_of_words }}",
+  "inLanguage": "es-CO"
+  {% elsif page.layout == 'servicio' %}
+  "@type": "Service",
+  "name": "{{ page.title | strip_html | strip }}",
+  "description": "{{ page.description | strip_html | strip }}",
+  "serviceType": "Servicio de turbos diésel",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "{{ site.name }}",
+    "image": "{{ site.url }}/img/logo-turbo-diesel-colombia-gd.webp",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ site.direccion }}",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "postalCode": "110721",
+      "addressCountry": "CO"
+    },
+    "telephone": "+57{{ site.telefono }}",
+    "priceRange": "$$"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "",
+    "priceCurrency": "COP",
+    "availability": "https://schema.org/InStock",
+    "url": "{{ site.url }}{{ page.url }}"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Bogotá"
+  },
+  "serviceOutput": "Mejora en el rendimiento y prolongación de la vida útil de sistemas turbo en motores diésel",
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}/contacto",
+      "inLanguage": "es-CO",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "result": {
+      "@type": "Reservation",
+      "name": "Agenda de servicio"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "image": "{{ site.url }}{{ page.hero }}",
+  {% if page.servicios_ofrecidos %}
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Servicios específicos",
+    "itemListElement": [
+      {% for servicio in page.servicios_ofrecidos %}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "{{ servicio | strip_html | truncate: 50 }}",
+          "description": "{{ servicio | strip_html }}"
+        }
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  },
+  {% endif %}
+  {% if page.faqs %}
+  "mainEntity": [
+    {% for faq in page.faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.pregunta }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.respuesta }}"
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+  {% endif %}
+  {% else %}
+  "@type": "WebPage",
+  "name": "{{ page.title }}",
+  "description": "{{ page.description }}",
+  "url": "{{ site.url }}{{ page.url }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ site.url }}{{ page.url }}"
+  },
+  "image": "{% if page.hero %}{{ site.url }}{{ page.hero }}{% else %}{{ site.url }}/img/servicios-turbo-diesel-de-colombia-gd.avif{% endif %}",
+  "inLanguage": "es-CO",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.name }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/img/logo-turbo-diesel-colombia-gd.webp"
+    }
+  }
+  {% endif %}
+}

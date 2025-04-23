@@ -1,0 +1,29 @@
+---
+layout: pagina
+title: "Categoría GUÍAS del blog de Turbo Diésel de Colombia GD"
+description: Entra en nuestra categoría de Guías de nuestro blog. Aprende a hacer muchas cosas que cuidarán la vida útil de tu turbo alimentador. Cuídalo!
+h1: "Categoría Guías de nuestro blog de turbos"
+hero: img/blog/blog-turbo-diesel.avif
+alt: Turbo para motores diésel con el logo de la empresa
+permalink: /blog/guias
+---
+{% include datos.html %}
+<main class="servicios wrapper flow">
+  <h2>Artículos de la categoría Guías: Aprende a cuidar el turbo de tu motor</h2>
+  
+  <ul class="posts">
+    {% for post in site.posts %}
+    {% if post.category == "guias" %}
+    <li class="posts__blog">
+      <img src="{{post.hero|relative_url}}" alt="{{post.alt}}" loading="lazy" width="320" height="180">
+      <div>
+        <small>{{post.date | date: "%d-%m-%Y"}}</small>
+        <h4>{{post.h1}}</h4>
+        <p class="intro">{{post.description}}</p>
+        <a href="{{post.url|relative_url}}" title="{{post.title}}" class="link boton boton_2">Leer más</a>
+      </div>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</main>

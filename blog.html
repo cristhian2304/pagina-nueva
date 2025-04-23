@@ -1,0 +1,56 @@
+---
+layout: pagina
+title: "Blog Turbo Diésel - La Biblia del Rugido y la Potencia"
+description: El santuario digital para los verdaderos creyentes del turbo en motores. Conocimiento puro y duro para mantener tu potencia en diésel y gasolina.
+h1: "El blog de Turbo DiéseL de Colombia GD: mantente en el camino"
+intro: El blog del turbo para motores diésel y de gasolina, te ofrece noticias y consejos de mantenimiento que te ahorrarán dinero y tiempo. No te los pierdas
+hero: img/blog/blog-turbo-diesel.avif
+alt: Turbo para motores diésel con el logo de la empresa
+---
+<main class="beneficios wrapper">
+  <h2>El blog de Turbo Diésel de Colombia DG te mantiene en funcionamiento</h2>
+  <p>Son más de <strong>14 años de experiencia reparando y cuidando turbos</strong> de todo tipo de motores y máquinas. Seguro, tenemos mucho que enseñarte. Léelo en este blog:</p>
+  <ul class="posts">
+    {% for post in site.posts %}
+    <li class="posts__blog">
+      <img src="{{post.hero|relative_url}}" alt="{{post.alt}}" loading="lazy" width="320" height="180">
+      <div>
+        <small>{{post.date | date: "%d-%m-%Y"}}</small>
+        <h4>{{post.h1}}</h4>
+        <p class="intro">{{post.description}}</p>
+        <a href="{{post.url|relative_url}}" title="{{post.title}}" class="link boton boton_2">Leer más</a>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</main>
+<!-- Actúa como un experto redactor SEO con técnicas de persuasión y storytelling.
+
+Necesito que me ayudes a salvar mi trabajo. Para esto, tengo que hacer textos que posicionen una página web y motive a la gente a actuar. Pero no se puede notar que lo hiciste tú. Debe tener un estilo muy humano, personal, como si la persona que estuviera escribiendo fuera Daniel Otero de la Revisto Motor de Colombia, o el estilo de Mike Finnegan, conocido por su trabajo en "Roadkill". Quizá combinar ambos estilos.
+
+El tema para hacer el artículo de hoy es "Aceites de turbos diesel". Algunas palabras clave para utilizar, según mi investigación de SEO, son "aceites motor, aceite para diesel turbo, aceite para motores diesel turbo, lubricación turbo, mejor aceite para un turbo diesel, aceite para turbo diesel intercooler y turbo diesel aceite". Puedes utilizar palabras semánticamente relacionadas.
+
+La competencia tiene los siguientes títulos:
+
+"<h1>ACEITE MOTOR DIESEL
+
+<H1> ACEITE CASTROL EDGE TURBO 5W40 CUARTO
+  <H3> Sé el primero en valorar “ACEITE CASTROL EDGE TURBO 5W40 CUARTO” Cancelar la respuesta
+  <H2> Quick Comparison
+  <H2> Aceite 5w20 Mobil 2000 - es un aceite semisintetico para motor
+  <H2> Aceite para motor Sintetico 5w30 Mobil 3000 - galon
+
+<H1> Aceite Motor Castrol Edge Turbo Diesel - 1 Litro
+  <H3> Nuestras Marcas
+
+<H1> CAM2 TURBO DIESEL D SAE 40 API CF
+  <H2> Otros productos de la marca
+  <H3> CAM2 HD GEO SAE 15W-40
+  <H3> CAM2 MOLY GREASE EP 2
+  <H3> CAM2 GEAR LUBE SAE 80W-90 GL-4
+
+<H1> Aceite Turbo Diesel - CAM 2"
+
+La empresa no vende los artículos aquí mencionados. La competencia sí. Así que creo que podemos enlazar productos de tiendas de mercadolibre o amazon. Y recomendar el servicio de mantenimiento y reparación de turbos en la página web (Ejemplo: turbodieseldecolombiagd.com/mantenimiento).
+
+Sobre la redacción: escribe en markdown. El texto es para un artículo de un blog. Utiliza una redacción con muy buena calificación de facilidad de lectura, pero no utilices solo listas. Utiliza también cuadros, o textos con algún tipo de interacción con el lector. El reto es posicionarnos por encima de nuestra competencia -->

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{{content}}
+{% include share.html%}
+{% include carousel.html %}
+<aside class="related-posts">
+  <h2>Artículos Relacionados</h2>
+  
+  {% assign posts = site.posts | where_exp:"post", "post.url != page.url" | sample: 3 %}
+  
+  <div class="related-posts-grid">
+    {% for post in posts %}
+      <div class="related-post-card">
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="related-post-image">
+        {% endif %}
+        
+        <div class="related-post-content">
+          <h3>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h3>
+          
+          <p class="related-post-meta">
+            {{ post.date | date: "%d/%m/%Y" }}
+          </p>
+          
+          {% if post.excerpt %}
+            <p class="related-post-excerpt">
+              {{ post.excerpt | strip_html | truncatewords: 25 }}
+            </p>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</aside>

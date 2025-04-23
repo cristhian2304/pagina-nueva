@@ -1,0 +1,170 @@
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: var(--gris3);
+}
+
+h4 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  color: var(--gris3);
+}
+
+h5 {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: var(--gris2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+ol li {
+  margin-left: 3em;
+  list-style: decimal;
+}
+
+::marker {
+  font-size: 2rem;
+  color: var(--principal);
+  font-family: var(--fuenteTitulos);
+}
+
+
+blockquote {
+  background-color: var(--acento);
+  border-left: 4px solid var(--accion);
+  margin: 2rem 0;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+
+  p{
+    font-family: var(--fuenteTitulos);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    line-height: 1.6;
+    color: var(--secundario);
+  }
+}
+
+blockquote::before {
+  content: '"';
+  font-size: 6rem;
+  color: var(--secundario);
+  position: absolute;
+  top: -1.4rem;
+  left: 1rem;
+  opacity: 0.2;
+}
+
+blockquote p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+blockquote cite {
+  display: block;
+  font-family: var(--fuenteTexto);
+  font-size: 1rem;
+  font-style: normal;
+  color: var(--principal);
+  margin-top: 1rem;
+  text-align: right;
+}
+
+blockquote cite::before {
+  content: '— ';
+}
+
+@media (max-width: 768px) {
+  blockquote {
+    padding: 1.5rem;
+  }
+  
+  blockquote::before {
+    font-size: 4rem;
+  }
+}
+
+table {
+  width: 100%;
+  margin: 2em 0 4em;
+  box-shadow: var(--shadow);
+}
+
+table tr {
+  border-bottom: 2px dotted var(--gris1);
+  display: flex;
+  padding: 1.2em 0;
+  flex-wrap: wrap;
+  gap: 1em;
+  width: 100%;
+}
+
+table th:nth-child(even),
+table tr:nth-child(even) {
+  background-color: var(--gris1);
+}
+
+table th {
+  font-weight: 900;
+}
+
+table td,
+table th {
+  padding: 8px;
+  flex: 1 0 200px;
+}
+
+.datos{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-around;
+  padding: 4em 0;
+
+  li{
+    max-width: 180px;
+    text-align: center;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    gap: 12px;
+
+    h3{
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      margin: 0;
+    }
+  }
+}
+
+.parallax {
+  height: 50vh;
+  background-image: url("{{ 'img/turbo-diesel.avif' | relative_url }}");
+  background-attachment: fixed;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parallax-content {
+  background-color: rgba(255,255,255,.5);
+  color: white;
+  padding: 2em 0;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.soon{
+  background-color: var(--gris1);
+  box-shadow: 0 0 0 100vmax var(--gris1);
+  -webkit-clip-path: inset(0 -100vmax);
+          clip-path: inset(0 -100vmax);
+  padding-bottom: 4em;
+}

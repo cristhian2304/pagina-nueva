@@ -1,0 +1,71 @@
+.gallery-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+  padding: 2rem 0;
+  width: min(100%, 1200px);
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.gallery-slider span {
+  position: absolute;
+  background-color: var(--clr2);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  padding: 2px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.gallery-slider span:first-child {
+  left: 0;
+}
+
+.gallery-slider span:last-child {
+  right: 0;
+}
+
+.slide-container {
+  display: flex;
+  gap: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 2rem ;
+  scroll-behavior: smooth;
+}
+
+.slide-container.dragging {
+  cursor: -webkit-grab;
+  cursor: grab;
+  scroll-behavior: auto;
+}
+
+.slide-container.dragging img {
+  pointer-events: none;
+}
+
+.slide-container figure {
+  display: inline-block; /* Asegura que los artículos estén en una fila */
+  flex: 0 0 auto; /* Evita que los artículos se encojan o crezcan */
+  margin-left: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  line-height: 0;
+}
+
+.slide-container figure:first-child {
+  margin-left: 0;
+}
+
+.slide-container img {
+  max-width: 490px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
