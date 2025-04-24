@@ -9,7 +9,6 @@ body {
   background-color: #f8f8f8;
 }
 
-/* Counter container styles */
 .stats-container {
   display: flex;
   justify-content: space-between;
@@ -18,7 +17,6 @@ body {
   padding: 0 20px;
 }
 
-/* Individual counter item */
 .stats-item {
   flex: 1;
   padding: 30px 20px;
@@ -31,7 +29,6 @@ body {
   border-right: none;
 }
 
-/* Counter title styles */
 .stats-title {
   font-size: 16px;
   color: #333;
@@ -40,7 +37,6 @@ body {
   line-height: 1.4;
 }
 
-/* Counter number styles */
 .stats-number {
   font-size: 46px;
   font-weight: bold;
@@ -48,7 +44,6 @@ body {
   margin-bottom: 10px;
 }
 
-/* Counter subtitle styles */
 .stats-subtitle {
   font-size: 12px;
   color: #c0a080;
@@ -56,7 +51,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .stats-container {
       flex-direction: column;
@@ -72,3 +66,4 @@ body {
       border-bottom: none;
   }
 }
+

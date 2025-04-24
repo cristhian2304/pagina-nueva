@@ -204,3 +204,87 @@
   margin-right: auto;
   display: block;
 }
+
+.servicios.tres_columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+  gap: 30px;
+  align-items: start;
+}
+
+/* Estilos para columna izquierda */
+.left-column h4 {
+  color: #999;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.left-column h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.2;
+}
+
+.left-column h2 strong {
+  color: #0066cc;
+  display: block;
+}
+
+.left-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.left-column ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.left-column ul li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #999;
+}
+
+
+.phone-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: #3067b2;
+  stroke-width: 2;
+}
+
+.reach-out {
+  color: #737373;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.phone-number {
+  color: #0d2b7a;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

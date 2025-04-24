@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 40px 0 20px;
+  background-color: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* TABLA con estructura fija para garantizar layout horizontal */
+.footer-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.footer-table td {
+  vertical-align: top;
+  padding-right: 20px;
+}
+
+/* Primera columna para logo y datos de contacto */
+.logo-column {
+  width: 22%;
+}
+
+/* Columnas para enlaces */
+.links-column {
+  width: 18%;
+}
+
+/* Columna para descargas de app */
+.app-column {
+  width: 24%;
+  text-align: right;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.contact-info a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.app-download img {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  margin-left: 10px;
+  color: #666;
+  text-decoration: none;
+}
