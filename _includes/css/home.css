@@ -43,7 +43,7 @@
   background-color: var(--gris1);
   box-shadow: 0 0 0 100vmax var(--gris1);
   -webkit-clip-path: inset(0 -100vmax);
-          clip-path: inset(0 -100vmax);
+  clip-path: inset(0 -100vmax);
   padding-bottom: 4em;
 
   .boton{margin: 2em auto;}
@@ -104,4 +104,27 @@
       }
     }
   }
+}
+
+.company_cards_container{
+  display: grid;
+  gap: 1em;
+
+  .company_cards{
+    position: relative;
+    font-weight: 700;
+    border-top: 2px solid var(--gris2);
+    border-radius: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .number{
+      position: absolute;
+      top: -16px;
+      left: -28px;
+      color: var(--gris2);
+      font-weight: 700;
+    }
+  } 
 }

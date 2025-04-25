@@ -198,13 +198,6 @@
   transform: translateY(-5px);
 }
 
-.text_center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-}
-
 .servicios.tres_columnas {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
